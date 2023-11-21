@@ -83,6 +83,26 @@ async def Lula_Neymar(ctx):
   except discord.errors.Forbidden:
     await ctx.send(f'Vai tomar no cu {name}')
 
+##
+@bot.command(name='Tzin')
+async def Teste_bott(ctx):
+  try:
+    name = ctx.author.mention
+    await ctx.author.send(f'{name} e ae mano, gostou do comando?')
+  except discord.errors.Forbidden:
+    await ctx.send('Ops... não consegui te enviar a mensagem')
 
+
+@bot.command(name='gostei')
+async def gostei(ctx):
+  await ctx.send('Que bom que você gostou!!!')
+
+
+@bot.command(name='nao_gostei')
+async def nao_gostei(ctx):
+  await ctx.send(
+      'Ah, que pena que você não gostou, entre em contato com o @metalstan para dar seu feedback'
+  )
+##
 bot.run(
     'TOKEN')
