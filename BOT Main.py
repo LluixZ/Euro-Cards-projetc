@@ -72,23 +72,11 @@ async def pack_test(ctx):
   embed.set_image(url=cartas[carta_sorteada]['Imagem_da_carta'])
   await ctx.send(embed=embed)
 
-#O código abaixo foi feito pelo bem do humor
-@bot.command(name='Lula')
-async def Lula_Neymar(ctx):
-  try:
-    name = ctx.author.name
-    await ctx.author.send(
-        'https://tenor.com/view/lula-da-silva-jair-bolsonaro-presidente-2022-elenao-gif-26628518'
-    )
-  except discord.errors.Forbidden:
-    await ctx.send(f'Vai tomar no cu {name}')
-
-##
 @bot.command(name='Tzin')
 async def Teste_bott(ctx):
   try:
     name = ctx.author.mention
-    await ctx.author.send(f'{name} e ae mano, gostou do comando?')
+    await ctx.author.send(f'{name}, gostou do comando?')
   except discord.errors.Forbidden:
     await ctx.send('Ops... não consegui te enviar a mensagem')
 
@@ -103,6 +91,6 @@ async def nao_gostei(ctx):
   await ctx.send(
       'Ah, que pena que você não gostou, entre em contato com o @metalstan para dar seu feedback'
   )
-##
+  
 bot.run(
     'TOKEN')
